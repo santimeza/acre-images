@@ -1,0 +1,238 @@
+<style>
+  /* Global styles */
+  body {
+    font-family: "Gilda Display", serif; /* Apply Gilda Display font globally */
+  }
+
+  /* Main container styles */
+  .team-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: "Gilda Display", serif;
+  }
+
+  /* Description text above tabs */
+  .team-container p {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 30px; /* Adds spacing below the description */
+  }
+
+  /* Tabs container styles */
+  .team-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  /* Tab styles */
+  .team-tab {
+    padding: 10px 20px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .team-tab:hover {
+    background: black;
+    color: white;
+  }
+
+  .team-tab.active {
+    background: black;
+    color: white;
+    border-color: black;
+  }
+
+  /* Team member styles */
+  .team-member {
+    display: none;
+    margin-top: 40px; /* Margin to separate from tabs */
+    padding-top: 40px; /* Adds padding above for consistent spacing */
+  }
+
+  .team-member.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    padding-top: 0; /* Remove extra padding when active */
+    margin-top: 60px; /* Ensure uniform spacing between members */
+  }
+
+  .team-photo {
+    flex: 1 1 30%;
+  }
+
+  .team-photo img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+  }
+
+  /* Team text (bio and role) */
+  .team-text h3 {
+    margin: 0;
+    font-size: 2rem; /* Increased name font size */
+  }
+
+  .team-text p.role {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .team-text p.bio {
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* Layout fix: Ensure image is on the left side of the bio */
+  .team-member.active {
+    flex-direction: row; /* Keep the layout horizontal */
+    justify-content: flex-start;
+  }
+
+  /* Fix spacing problem for the first active member */
+  .team-member:first-of-type.active {
+    margin-top: 60px; /* Manually add extra spacing */
+  }
+
+  .team-text {
+    flex: 1 1 60%; /* Ensures the text takes up 60% of space */
+  }
+
+  .team-photo {
+    flex: 1 1 30%; /* Ensures the image takes up 30% of space */
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .team-member.active {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .team-text p.bio {
+      text-align: left;
+    }
+  }
+</style>
+
+<div class="team-container">
+  <p style="text-align: center">
+    Meet our talented team of professionals who bring experience, passion, and
+    dedication to every project.
+  </p>
+
+  <div class="team-tabs">
+    <div class="team-tab active" onclick="showMember(0)">Gabe Arechaederra</div>
+    <div class="team-tab" onclick="showMember(1)">Allan Chandler</div>
+    <div class="team-tab" onclick="showMember(2)">Damon Hubbart</div>
+  </div>
+
+  <div id="team-members">
+    <div class="team-member active">
+      <div class="team-text">
+        <h3>Gabe Arechaederra</h3>
+        <p class="role">Founding Partner</p>
+        <p class="bio">
+          Gabe founded ACRE Investment Company, LLC with a singular purpose:
+          Identify market inefficiencies where a scalable debt and equity
+          solution can take purchase. Prior to founding ACRE Gabe worked at
+          Colliers International for 18 years working his way up from general
+          leasing and sales, institutional investment sales, and private equity
+          and debt markets. He was the founder of the Colliers Private Equity
+          Group in 2003 and maintained a leadership role as the Group’s Director
+          completing in excess of $3.2 billion and over 2.8 million square feet
+          of completed transactions. Prior to Colliers, Gabe attended Loyola
+          High School of Los Angeles and then the University of California at
+          Berkeley.
+        </p>
+      </div>
+      <div class="team-photo">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D5603AQG_SqjGE2W1kw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692399044663?e=1751500800&v=beta&t=O59fbhQNzfbX7p8xYbC83UFpseg4ZD0pk_MivlawT8c"
+          alt="Gabe Arechaederra"
+        />
+      </div>
+    </div>
+
+    <div class="team-member">
+      <div class="team-text">
+        <h3>Allan Chandler</h3>
+        <p class="role">Managing Partner</p>
+        <p class="bio">
+          Allan joined ACRE in 2012 as Managing Partner. He oversees all
+          business operations and financial activities of the company. Allan was
+          a founding member of Golden State Overnight (GSO), a transportation
+          and logistics company with over 20 operations facilities throughout
+          California, Arizona and Nevada. In his 13-year tenure at GSO as Chief
+          Information Officer, Allan provided strategic vision and hands-on
+          management leadership. Prior to joining ACRE, Allan founded a
+          consulting business in 2008 that was focused on developing custom
+          infrastructure design and workflow automation software. Allan is a
+          graduate of the University of Western Ontario, Canada.
+        </p>
+      </div>
+      <div class="team-photo">
+        <img
+          src="https://media.licdn.com/dms/image/v2/C5603AQGHSZsV_hJCZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1523651858181?e=1751500800&v=beta&t=2nMxUobs-9wWAyYWn3C-hL_oeXwP6D_HdOR3xT6r3jE"
+          alt="Allan Chandler"
+        />
+      </div>
+    </div>
+
+    <div class="team-member">
+      <div class="team-text">
+        <h3>Damon Hubbart</h3>
+        <p class="role">Director of Acquisitions</p>
+        <p class="bio">
+          Damon joined ACRE in 2012, he directs the sourcing and acquisition of
+          real estate to specifically fit the unique needs of each tenant. Damon
+          spent 10 years in brokerage with Colliers International in Leasing and
+          Acquisitions. Damon’s experience has provided him with the background
+          and expertise to source, evaluate and close complicated real estate
+          transactions. During his career, Damon has closed in excess of $500
+          million in transactions including development, leased investments,
+          office, industrial and retail projects. Prior to real estate, Damon
+          had a successful career in enterprise storage technology sales. Damon
+          graduated from the University of Arizona.
+        </p>
+      </div>
+      <div class="team-photo">
+        <img
+          src="https://media.licdn.com/dms/image/v2/C5603AQGnod63x3YCMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1544204914168?e=1751500800&v=beta&t=MS-HCde13JK-HV593EYHmwv37t6WjrivKEckAEMy1K8"
+          alt="Damon Hubbart"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showMember(index) {
+    const tabs = document.querySelectorAll(".team-tab");
+    const members = document.querySelectorAll(".team-member");
+
+    // Remove the active class from all tabs and members
+    tabs.forEach((tab, i) => {
+      tab.classList.remove("active");
+      members[i].classList.remove("active");
+    });
+
+    // Add active class to the clicked tab and corresponding member
+    tabs[index].classList.add("active");
+    members[index].classList.add("active");
+  }
+</script>

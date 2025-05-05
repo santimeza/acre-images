@@ -1,0 +1,102 @@
+<div
+  class="team-member"
+  style="
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+    text-align: center;
+    margin-bottom: 2rem;
+  "
+>
+  <img
+    src="https://media.licdn.com/dms/image/v2/D5603AQG_SqjGE2W1kw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692399044663?e=1751500800&v=beta&t=O59fbhQNzfbX7p8xYbC83UFpseg4ZD0pk_MivlawT8c"
+    alt="Team Member"
+    style="width: 150px; border-radius: 50%"
+  />
+  <h3>Gabe Arechaederra</h3>
+  <p><strong>Founding Partner</strong></p>
+  <p style="max-width: 600px; margin: 0 auto; text-align: left">
+    Gabe founded ACRE Investment Company, LLC with a singular purpose: Identify
+    market inefficiencies where a scalable debt and equity solution can take
+    purchase. Prior to founding ACRE Gabe worked at Colliers International for
+    18 years working his way up from general leasing and sales, institutional
+    investment sales, and private equity and debt markets. He was the founder of
+    the Colliers Private Equity Group in 2003 and maintained a leadership role
+    as the Group’s Director completing in excess of $3.2 billion and over 2.8
+    million square feet of completed transactions. Prior to Colliers, Gabe
+    attended Loyola High School of Los Angeles and then the University of
+    California at Berkeley.
+  </p>
+</div>
+
+<div
+  class="team-member"
+  style="
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+    text-align: center;
+    margin-bottom: 2rem;
+  "
+>
+  <img
+    src="https://media.licdn.com/dms/image/v2/C5603AQGHSZsV_hJCZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1523651858181?e=1751500800&v=beta&t=2nMxUobs-9wWAyYWn3C-hL_oeXwP6D_HdOR3xT6r3jE"
+    alt="Team Member"
+    style="width: 150px; border-radius: 50%"
+  />
+  <h3>Allan Chandler</h3>
+  <p><strong>Managing Partner</strong></p>
+  <p style="max-width: 600px; margin: 0 auto; text-align: left">
+    Allan joined ACRE in 2012 as Managing Partner. He oversees all business
+    operations and financial activities of the company. Allan was a founding
+    member of Golden State Overnight (GSO), a transportation and logistics
+    company with over 20 operations facilities throughout California, Arizona
+    and Nevada. In his 13-year tenure at GSO as Chief Information Officer, Allan
+    provided strategic vision and hands-on management leadership. Prior to
+    joining ACRE, Allan founded a consulting business in 2008 that was focused
+    on developing custom infrastructure design and workflow automation software.
+    Allan is a graduate of the University of Western Ontario, Canada.
+  </p>
+</div>
+
+<div
+  class="team-member"
+  style="
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+    text-align: center;
+    margin-bottom: 2rem;
+  "
+>
+  <img
+    src="https://media.licdn.com/dms/image/v2/C5603AQGnod63x3YCMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1544204914168?e=1751500800&v=beta&t=MS-HCde13JK-HV593EYHmwv37t6WjrivKEckAEMy1K8"
+    alt="Team Member"
+    style="width: 150px; border-radius: 50%"
+  />
+  <h3>Damon Hubbart</h3>
+  <p><strong>Director of Acquisitions</strong></p>
+  <p style="max-width: 600px; margin: 0 auto; text-align: left">
+    Damon joined ACRE in 2012, he directs the sourcing and acquisition of real
+    estate to specifically fit the unique needs of each tenant. Damon spent 10
+    years in brokerage with Colliers International in Leasing and Acquisitions.
+    Damon’s experience has provided him with the background and expertise to
+    source, evaluate and close complicated real estate transactions. During his
+    career, Damon has closed in excess of $500 million in transactions including
+    development, leased investments, office, industrial and retail projects.
+    Prior to real estate, Damon had a successful career in enterprise storage
+    technology sales. Damon graduated from the University of Arizona.
+  </p>
+</div>
+
+<script>
+  window.addEventListener("scroll", function () {
+    document.querySelectorAll(".team-member").forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.style.opacity = 1;
+        el.style.transform = "translateX(0)";
+      }
+    });
+  });
+</script>
